@@ -5,23 +5,29 @@ and open the template in the editor.
 */
 /* 
     Created on : 15/05/2015, 11:14:51 AM
-    Author     : lopez-e
+    Author     : Eduardp Chombo
 */
 
+/*
+* Background
+*/
 body {
-    background-color: #EBE8E4;
-    color: #222;
+    background-color: #15191d;
+    color: #bbb;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 15px;
+    margin: 0;
+    padding: 0;
 }
+//-
 
 nav {
-    background-color: #fff;
+    background-color: #dedede;
     border: 1px solid #dedede;
     border-radius: 4px;
     box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
-    color: #888;
+    color: #7B808A;
     display: block;
     margin: 8px 22px 8px 22px;
     overflow: hidden;
