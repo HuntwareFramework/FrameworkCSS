@@ -12,11 +12,14 @@ and open the template in the editor.
 * Background
 */
 body {
-    background-color: #EBE8E4;
-    color: #222;
+    background-color: #272e30;
+    color: #dedede;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 15px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 //-
 
@@ -29,7 +32,8 @@ nav {
     display: block;
     margin: 8px 22px 8px 22px;
     overflow: hidden;
-    width: 90%; 
+    width: 100%;
+    display: block;
 }
 
 nav ul {
