@@ -7,15 +7,17 @@ and open the template in the editor.
     Created on : 15/05/2015, 11:14:51 AM
     Author     : Eduardp Chombo
 */
+
+/*************** Nav.Bar Rules ******************/
+/************************************************/
 @font-face {
-        font-family: 'Huntware-DefaultFont';
-        src : url('Century Gothic.ttf');
+    font-family: 'Huntware-DefaultFont';
+    src : url('Century Gothic.ttf');
 }
 
 * {
     margin: 0;
     padding: 0;
-    
 }
 html {
     background-color: #fff;
@@ -28,6 +30,7 @@ body {
     //font: 0.75em/1.5em Arial,sans-serif;
     width: 100%;
 }
+
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -148,7 +151,25 @@ body {
     padding-left: 15px;
 }
 
-/* responsive rules */
+.search-nav
+{
+    color: #333333;
+    display: block;
+    font-size: 1.3em;
+    line-height: 49px;
+    //padding: 0 15px;
+    margin: 0 0 0 10px;
+    float: right !important;
+    padding: 0;
+    
+}
+
+/*************** Form Rules *********************/
+/************************************************/
+
+
+/*************** Responsive Rules ***************/
+/************************************************/
 @media all and (max-width : 980px) {
     #nav > li {
         float: none;
@@ -171,4 +192,22 @@ body {
         display: block;
         width: auto;
     }
+    
+    .search-nav
+    {
+        float: left!important;
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .search-nav > form
+    {
+        color: #333333;
+        display: block;
+        //font-size: 1.3em;
+        line-height: 49px;
+        padding: 0 15px;
+    }
 }
+
