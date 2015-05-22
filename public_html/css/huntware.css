@@ -14,21 +14,16 @@ and open the template in the editor.
     font-family: 'Huntware-DefaultFont';
     src : url('Century Gothic.ttf');
 }
-
-* {
-    margin: 0;
-    padding: 0;
-}
-html {
-    background-color: #fff;
-    height: 100%;
-}
-body {
-    color: #333333;
+html{
     font-family: Huntware-DefaultFont;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    color: #cccccc;
+    background-color: #202121;
     font-size: 0.75em;
-    //font: 0.75em/1.5em Arial,sans-serif;
-    width: 100%;
 }
 
 .container {
@@ -40,9 +35,10 @@ body {
 
 .container-float
 {
-    background-color: #F5F5F5;
+    background-color: #777777;
     border-bottom: 5px solid #333333;
     position: fixed;
+    float: top;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -64,17 +60,17 @@ body {
     margin-right: auto;
     position: relative;
     width: 1000px;
-    max-width: 1000px;
+    display: block;
 }
 #nav ul.subs {
     background-color: #FFFFFF;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-    color: #333333;
+    color: #cccccc;
     display: none;
     left: 0;
     padding: 2%;
     position: absolute;
-    top: 54px;
+    top: 66px;
     width: 96%;
 }
 #nav > li {
@@ -99,10 +95,10 @@ body {
     white-space: normal;
 }
 #nav > li > a {
-    color: #333333;
+    color: #cccccc;
     display: block;
     font-size: 1.3em;
-    line-height: 49px;
+    line-height: 66px;
     padding: 0 15px;
     //text-transform: uppercase;
 }
@@ -116,7 +112,7 @@ body {
 }
 
 /* submenu */
-#nav li:hover ul.subs {
+#nav li:hover ul.subs{
     display: block;
 }
 #nav ul.subs > li {
@@ -153,19 +149,76 @@ body {
 
 .search-nav
 {
-    color: #333333;
+    color: #cccccc;
     display: block;
     font-size: 1.3em;
-    line-height: 49px;
+    line-height: 66px;
     //padding: 0 15px;
     margin: 0 0 0 10px;
     float: right !important;
     padding: 0;
-    
+
 }
 
 /*************** Form Rules *********************/
 /************************************************/
+input
+{
+    width: 200px;
+    height: 28px;
+
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: none;
+    border-color: #cccccc;
+
+    vertical-align: central;
+    margin: auto;
+    padding: auto;
+}
+
+button
+{
+    width: 100px;
+    height: 28px;
+    margin: 0px;
+    padding: 0px;
+
+    border-style: solid;
+    border-width: 0px;
+    background-color: #3399ff;
+    border-radius: 3px;
+
+    color: #FFFFFF;
+}
+
+/*************** Wraper & Div Rules *************/
+/************************************************/
+
+.wraper{
+    display: block;
+    vertical-align: baseline;
+    margin: 0 auto;
+    width: 1000px;
+    overflow: hidden;
+}
+
+.temporal-container
+{
+    float: left;
+    overflow: hidden;
+    margin: 100px 0 100px 0;
+
+    width: 1000px;
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #333333;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: justify;
+}
 
 
 /*************** Responsive Rules ***************/
@@ -192,7 +245,7 @@ body {
         display: block;
         width: auto;
     }
-    
+
     .search-nav
     {
         float: left!important;
@@ -200,14 +253,87 @@ body {
         margin: 0;
         padding: 0;
     }
-    
+
     .search-nav > form
     {
         color: #333333;
         display: block;
         //font-size: 1.3em;
-        line-height: 49px;
+        line-height: 65px;
         padding: 0 15px;
     }
 }
 
+
+@-webkit-keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
+}
+
+@keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
+}
+
+.flipInX {
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation-name: flipInX;
+    animation-name: flipInX;
+}
