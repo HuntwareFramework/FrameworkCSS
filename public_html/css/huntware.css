@@ -7,6 +7,7 @@ and open the template in the editor.
     Created on : 15/05/2015, 11:14:51 AM
     Author     : Eduardp Chombo
 */
+@import "animate.css";
 
 /*************** Nav.Bar Rules ******************/
 /************************************************/
@@ -21,12 +22,21 @@ html{
 
 body {
     margin: 0;
-    color: #cccccc;
+    color: #bbb;
+    font-size: 0.9em;
     background-color: #202121;
-    font-size: 0.75em;
+    background-image: url("img/wild_oliva.png");
+    background-size: initial;
+    background-repeat: repeat;
+    background-size: 198px;
 }
 
 .container {
+    background-color: #202121;
+    background: rgba(45,45,45, 0.75);
+    /*background: rgba(50, 50, 50, 0.7);*/
+    border-bottom: 5px solid #3C948B;
+    float: top;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -35,8 +45,10 @@ body {
 
 .container-float
 {
-    background-color: #777777;
-    border-bottom: 5px solid #333333;
+    background-color: #202121;
+    background: rgba(45,45,45, 0.75);
+    /*background: rgba(50, 50, 50, 0.7);*/
+    border-bottom: 5px solid #3C948B;
     position: fixed;
     float: top;
     margin-left: auto;
@@ -63,9 +75,8 @@ body {
     display: block;
 }
 #nav ul.subs {
-    background-color: #FFFFFF;
+    background-color: #eee;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-    color: #cccccc;
     display: none;
     left: 0;
     padding: 2%;
@@ -103,17 +114,27 @@ body {
     //text-transform: uppercase;
 }
 #nav > li:hover > a, #nav > a:hover {
-    background-color: #F55856;
+    background-color: #3C948B;
     color: #FFFFFF;
 }
 #nav li.active > a {
-    background-color: #333333;
+    background-color: #555;
     color: #FFFFFF;
 }
 
 /* submenu */
 #nav li:hover ul.subs{
     display: block;
+
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
 }
 #nav ul.subs > li {
     display: inline-block;
@@ -122,12 +143,20 @@ body {
     vertical-align: top;
     width: 33%;
 }
+#nav ul.subs > li > a {
+    color: #202121;
+    line-height: 20px;
+    border-bottom-style: solid;
+    border-bottom-color: #bbb;
+    border-bottom-width: 1px;
+    padding-bottom: 5px;
+}
 #nav ul.subs > li a {
-    color: #777777;
+    color: #202121;
     line-height: 20px;
 }
 #nav ul li a:hover {
-    color: #F55856;
+    color: #3C948B;
 }
 #nav ul.subs > li > a {
     font-size: 1.3em;
@@ -204,7 +233,7 @@ button
     overflow: hidden;
 }
 
-.temporal-container
+.container
 {
     float: left;
     overflow: hidden;
@@ -214,10 +243,10 @@ button
     padding: 20px;
     border-style: solid;
     border-width: 1px;
-    border-color: #333333;
-    border-radius: 5px;
+    border-color: #555;
     box-sizing: border-box;
     text-align: justify;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 
@@ -262,78 +291,4 @@ button
         line-height: 65px;
         padding: 0 15px;
     }
-}
-
-
-@-webkit-keyframes flipInX {
-    0% {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-        opacity: 0;
-    }
-
-    40% {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    60% {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-        opacity: 1;
-    }
-
-    80% {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    }
-
-    100% {
-        -webkit-transform: perspective(400px);
-        transform: perspective(400px);
-    }
-}
-
-@keyframes flipInX {
-    0% {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-        opacity: 0;
-    }
-
-    40% {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    60% {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-        opacity: 1;
-    }
-
-    80% {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    }
-
-    100% {
-        -webkit-transform: perspective(400px);
-        transform: perspective(400px);
-    }
-}
-
-.flipInX {
-    -webkit-backface-visibility: visible !important;
-    backface-visibility: visible !important;
-    -webkit-animation-name: flipInX;
-    animation-name: flipInX;
 }
