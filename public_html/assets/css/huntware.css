@@ -10,5 +10,10 @@ and open the template in the editor.
 
 .hw-logo-header
 {
+    width: 300px;
+}
+
+.hw-logo-text
+{
     width: 250px;
 }
