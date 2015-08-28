@@ -17,3 +17,15 @@ and open the template in the editor.
 {
     width: 250px;
 }
+
+.hw-divider-horizontal
+{
+    /* Potition */
+    width: 90%;
+    height: 1px;
+
+    /* Design */
+    border-width: 0 0 0 1px;
+    border-style: solid;
+    border-color: #4b4b4b;
+}
